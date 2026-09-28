@@ -32,8 +32,6 @@ API
 <img width="2487" height="1488" alt="image" src="https://github.com/user-attachments/assets/c888d601-9555-48de-8695-a17170beb611" />
 
 
-
-# PROJECT - Deployment
 ## Getaround Analysis 🚗
 
 
