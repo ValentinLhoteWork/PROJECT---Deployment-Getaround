@@ -32,6 +32,68 @@ API
 <img width="2487" height="1488" alt="image" src="https://github.com/user-attachments/assets/c888d601-9555-48de-8695-a17170beb611" />
 
 
+
+
+
+
+## API & Docker
+
+### 1. API déployée sur Hugging Face
+
+L'API FastAPI est déployée sur Hugging Face Spaces.
+
+**Hugging Face Space :**
+https://huggingface.co/spaces/ValLho/Getaround-api-hf
+
+Pour accéder à la documentation interactive Swagger et tester l'API :
+
+```text
+https://vallho-getaround-api-hf.hf.space/docs
+```
+
+L'endpoint `/predict` permet d'envoyer les caractéristiques d'un véhicule via une requête **POST** et de récupérer la prédiction du modèle :
+
+```text
+https://vallho-getaround-api-hf.hf.space/predict
+```
+
+La documentation Swagger (`/docs`) permet notamment de tester directement une requête et d'observer la réponse du modèle.
+
+---
+
+### 2. Lancement de l'application avec Docker
+
+Pour lancer l'application Streamlit localement avec Docker, **Docker Desktop doit être installé et démarré**.
+
+Depuis le répertoire du projet, construire l'image Docker :
+
+```bash
+docker build -t getaround-streamlit .
+```
+
+La construction de l'image peut prendre quelques minutes, notamment lors de l'installation des dépendances.
+
+Une fois l'image créée, lancer le conteneur :
+
+```bash
+docker run -p 8501:8501 getaround-streamlit
+```
+
+L'application Streamlit est ensuite accessible depuis :
+
+```text
+http://localhost:8501
+```
+
+### Commandes récapitulatives
+
+```bash
+docker build -t getaround-streamlit .
+docker run -p 8501:8501 getaround-streamlit
+```
+
+
+
 ## Getaround Analysis 🚗
 
 
